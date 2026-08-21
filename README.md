@@ -1,5 +1,5 @@
 # Cómputo Científico - Doctorado
-Edgar Antonio De León Ramírez
+Saul Angel Sanchez Gonzalez
 ## Descripción del proyecto
 Repositorio destinado a las prácticas, algoritmos y documentación desarrollados para la asignatura de Cómputo Científico en el programa de Doctorado (UANL).
 
