@@ -1,5 +1,5 @@
 # Cómputo Científico - Doctorado
-Rama Nueva
+Edgar Antonio De León Ramírez
 ## Descripción del proyecto
 Repositorio destinado a las prácticas, algoritmos y documentación desarrollados para la asignatura de Cómputo Científico en el programa de Doctorado (UANL).
 
