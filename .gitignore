@@ -1,0 +1,84 @@
+# --- LaTeX ---
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fls
+*.fdb_latexmk
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.xdv
+*.pdf
+*.run.xml
+*.synctex(busy)
+._*.pdf
+*.lof
+*.lot
+*.cb
+*.cb2
+*.upa
+*.upb
+
+# --- Python (Común en Cómputo Científico) ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+.pytest_cache/
+.ipynb_checkpoints/
+
+# --- Datos y Resultados (Recomendado para Cómputo Científico) ---
+# Evita subir datasets pesados o salidas grandes generadas por tus scripts
+*.csv
+*.h5
+*.nc
+*.dat
+*.npy
+*.npz
+output/
+results/
+data/
+
+# --- Entornos Virtuales e IDEs ---
+.venv/
+venv/
+ENV/
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- Sistema Operativo ---
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
