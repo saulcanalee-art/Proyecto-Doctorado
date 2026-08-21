@@ -1,3 +1,5 @@
+`Edgar Antonio De León Ramírez`
+
 # Cómputo Científico - Doctorado
 Saul Angel Sanchez Gonzalez
 ## Descripción del proyecto
