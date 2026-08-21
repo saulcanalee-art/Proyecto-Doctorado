@@ -9,6 +9,7 @@ La organización del repositorio es la siguiente:
 * `data/`: Datos de entrada y resultados generados.
 * `docs/`: Documentos de investigación, reportes y archivos de LaTeX.
 * `notebook/`: Cuadernos de experimentación.
+* `ideas/:` Carpeta donde se suben ideas nuevas para el proyecto.
 
 ## Cómo reproducirlo
 1. Clona este repositorio localmente usando: `git clone https://github.com/saulcanalee-art/Proyecto-Doctorado.git`
