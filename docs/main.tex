@@ -1,0 +1,146 @@
+\documentclass[12pt, letterpaper]{article}
+
+% --- Paquetes de Idioma y Codificación ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish, es-tabla]{babel}
+
+% --- Paquetes de Matemáticas y Física ---
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{physics} % Proporciona comandos útiles para notación de Dirac, vectores, etc.
+\usepackage[version=4]{mhchem} % Para fórmulas químicas elegantes (\ce{Ti3C2O2})
+
+% --- Configuración de Márgenes (Estándar Académico) ---
+\usepackage{geometry}
+\geometry{
+    letterpaper,
+    top=2.5cm,
+    bottom=2.5cm,
+    left=3.0cm,
+    right=2.5cm
+}
+
+% --- Paquetes de Tablas y Figuras ---
+\usepackage{booktabs} % Para líneas horizontales elegantes en tablas (\toprule, \midrule, \bottomrule)
+\usepackage{graphicx}
+\usepackage{float}     % Permite fijar la posición de figuras/tablas con [H]
+\usepackage{caption}   % Personalización de pies de foto y títulos de tablas
+\captionsetup{font=small, labelfont=bf}
+
+% --- Configuración de Ruta para Imágenes ---
+\graphicspath{{figuras/}}
+
+% --- Bibliografía (BibLaTeX) ---
+\usepackage{csquotes}  % Recomendado por biblatex al usar babel en español
+\usepackage[
+    backend=biber,
+    style=numeric-comp, % Estilo numérico compacto comúnmente usado en física
+    sorting=none,       % Orden de aparición
+    doi=true,
+    isbn=false,
+    url=false
+]{biblatex}
+\addbibresource{referencias.bib}
+
+% --- Enlaces y Metadatos del PDF ---
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Ingeniería de interfaces y modulación topológica en heteroestructuras Heusler/MXene},
+    pdfauthor={Saúl Ángel Sánchez González},
+    pdfsubject={Protocolo de Investigación Doctoral},
+    pdfkeywords={Heusler, MXene, DFT, interfaces, física topológica}
+}
+
+% --- Estilo de Página ---
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headheight}{15pt} % Ajustado para evitar advertencias de fancyhdr
+\fancyhf{}
+\fancyhead[L]{\small\itshape Ingeniería de interfaces en Heusler/MXene}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% --- Cuerpo del Documento ---
+\begin{document}
+
+% ==================== PORTADA ====================
+\begin{titlepage}
+    \centering
+    \vspace*{0.5cm}
+    
+    {\scshape\LARGE Universidad Autónoma de Nuevo León} \\
+    \vspace{0.4cm}
+    {\large Facultad de Ciencias Físico Matemáticas} \\
+    \vspace{0.2cm}
+    {\large Subdirección de Estudios de Posgrado} \\
+    
+    \vspace{1.5cm}
+    
+    % Línea decorativa
+    \rule{\linewidth}{1mm} \\
+    \vspace{0.4cm}
+    {\Large\bfseries INGENIERÍA DE INTERFACES Y MODULACIÓN TOPOLÓGICA EN HETEROESTRUCTURAS HEUSLER/MXENE} \\
+    \vspace{0.3cm}
+    \rule{\linewidth}{1mm} \\
+    
+    \vspace{1.5cm}
+    
+    {\large\bfseries Protocolo de Investigación Doctoral} \\
+    \vspace{0.3cm}
+    {\large Presentado para cumplir parcialmente con los requisitos del programa de:} \\
+    {\large\itshape Doctorado en Ingeniería Física} \\
+    
+    \vspace{2.0cm}
+    
+    \begin{minipage}{0.85\textwidth}
+        \centering
+        \large
+        \textbf{Autor:} \\
+        Saúl Ángel Sánchez González \\
+        \vspace{0.8cm}
+        \textbf{Director de Tesis:} \\
+        Dr. Carlos Luna
+    \end{minipage}
+    
+    \vfill
+    
+    \rule{0.5\linewidth}{0.2pt} \\
+    \vspace{0.2cm}
+    {\small San Nicolás de los Garza, Nuevo León, México \\ Junio 2026}
+\end{titlepage}
+
+\newpage
+
+% ==================== ÍNDICE ====================
+\tableofcontents
+\newpage
+
+% ==================== SECCIONES ====================
+\input{secciones/01_Resumen}
+\newpage
+
+\input{secciones/02_Introduccion_y_Antecedentes}
+\newpage
+
+\input{secciones/03_Planteamiento}
+\newpage
+
+\input{secciones/04_Metodologia}
+\newpage
+
+\input{secciones/05_Cronograma}
+\newpage
+
+% ==================== REFERENCIAS ====================
+\phantomsection
+\addcontentsline{toc}{section}{Referencias Bibliográficas}
+\printbibliography[title={Referencias Bibliográficas}]
+
+\end{document}

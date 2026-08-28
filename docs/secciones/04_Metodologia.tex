@@ -1,0 +1,49 @@
+\section{Metodología y Detalles Computacionales}
+\label{sec:metodologia}
+
+La metodología propuesta para este proyecto doctoral se divide en tres etapas principales: diseño y construcción de los modelos de interfaces, optimización y cálculos DFT con Quantum ESPRESSO, y análisis de propiedades topológicas y de transporte.
+
+\subsection{Construcción de Modelos de Heteroestructuras}
+Se construirán superceldas que representen la interfaz entre la aleación de Heusler (plano de corte cristalográfico de interés, e.g., (001) o (111)) y el MXene bidimensional. Para minimizar los efectos de deformación artificial debido a la condición de frontera periódica en el plano, se seleccionarán combinaciones de superceldas tales que el desajuste de red sea inferior al 3\%:
+\begin{equation}
+    f = \frac{a_{\text{MXene}} - a_{\text{Heusler}}}{a_{\text{Heusler}}} \times 100\%
+\end{equation}
+Para evitar la interacción espuria entre imágenes periódicas en la dirección perpendicular a la interfaz, se introducirá una capa de vacío de al menos 18 \AA\ en la dirección $z$.
+
+\subsection{Cálculos de Primeros Principios con Quantum ESPRESSO}
+\label{subsec:qe}
+Todas las simulaciones de estructura electrónica y optimización de geometría se realizarán utilizando el código de código abierto \textbf{Quantum ESPRESSO}~\cite{giannozzi2009quantum,giannozzi2017advanced}, el cual está basado en la Teoría de la Funcional de la Densidad (DFT), ondas planas y pseudopotenciales.
+
+\subsubsection{Configuración de los Parámetros de Simulación}
+\begin{itemize}
+    \item \textbf{Funcional de Intercambio y Correlación:} Se empleará la aproximación de gradiente generalizado (GGA) con la parametrización de Perdew-Burke-Ernzerhof (PBE). En casos necesarios, se incorporarán correcciones de dispersión de van der Waals (e.g., DFT-D3) para modelar adecuadamente las interacciones débiles en la interfaz.
+    \item \textbf{Pseudopotenciales:} Se utilizarán pseudopotenciales del tipo proyectores de ondas aumentadas (PAW) o ultrasuaves (USPP) completamente relativistas para describir la interacción del núcleo con los electrones de valencia, permitiendo capturar de manera precisa los efectos del acoplamiento espín-órbita (SOC).
+    \item \textbf{Energía de Corte (Cutoff):} La energía de corte para la expansión de las funciones de onda (\texttt{ecutwfc}) y para la densidad de carga (\texttt{ecutrho}) se establecerá de acuerdo con las especificaciones de los pseudopotenciales elegidos para asegurar la convergencia total de la energía libre (típicamente \texttt{ecutwfc} $\ge$ 50 Ry y \texttt{ecutrho} $\ge$ 400 Ry).
+    \item \textbf{Integración en la Zona de Brillouin:} Se utilizará una malla de puntos $k$ tipo Monkhorst-Pack para el muestreo de la zona de Brillouin, con una densidad adaptada al tamaño de la supercelda para asegurar la convergencia (por ejemplo, una malla de $8 \times 8 \times 1$ para optimizaciones de celda).
+\end{itemize}
+
+En la Tabla~\ref{tab:dft_parameters} se resumen los parámetros iniciales de simulación contemplados.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Parámetros iniciales de simulación para los cálculos DFT en Quantum ESPRESSO.}
+    \label{tab:dft_parameters}
+    \begin{tabular}{ll}
+        \toprule
+        \textbf{Parámetro} & \textbf{Configuración Propuesta} \\
+        \midrule
+        Software & Quantum ESPRESSO (v7.0+) \\
+        Funcional XC & GGA-PBE (con correcciones vdW-DF / DFT-D3) \\
+        Tipo de Pseudopotencial & PAW completamente relativista (con SOC) \\
+        Corte de funciones de onda (\texttt{ecutwfc}) & 60 Ry \\
+        Corte de densidad de carga (\texttt{ecutrho}) & 480 Ry \\
+        Malla de puntos $k$ (Relajación) & $6 \times 6 \times 1$ (Monkhorst-Pack) \\
+        Malla de puntos $k$ (Cálculos de DOS) & $12 \times 12 \times 1$ \\
+        Criterio de convergencia de energía & $1.0 \times 10^{-6}$ Ry \\
+        Criterio de convergencia de fuerzas & $1.0 \times 10^{-3}$ Ry/bohr \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsubsection{Cálculo de Propiedades Topológicas}
+Para la clasificación topológica de las bandas, se utilizará la herramienta auxiliar \texttt{Wannier90} acoplada con Quantum ESPRESSO. A partir de las funciones de Wannier maximalmente localizadas (MLWFs), se construirán Hamiltonianos tight-binding efectivos para calcular los invariantes topológicos (como el número de Chern, la fase de Berry y los estados de borde en una geometría de cinta semi-infinita).
