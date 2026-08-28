@@ -1,4 +1,4 @@
-# Cómputo Científico - Doctorado
+# Cómputo Científico - Doctorado Materia que se lleva a cabo en la FCFM
 ## Descripción del proyecto
 Repositorio destinado a las prácticas, algoritmos y documentación desarrollados para la asignatura de Cómputo Científico en el programa de Doctorado (UANL).
 
