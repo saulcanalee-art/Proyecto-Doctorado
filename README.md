@@ -1,4 +1,5 @@
 # Cómputo Científico - Doctorado Materia que se lleva a cabo en la FCFM
+[![.github/workflows/latex.yml](https://github.com/saulcanalee-art/Proyecto-Doctorado/actions/workflows/latex.yml/badge.svg?branch=main)](https://github.com/saulcanalee-art/Proyecto-Doctorado/actions/workflows/latex.yml)
 ## Descripción del proyecto
 Repositorio destinado a las prácticas, algoritmos y documentación desarrollados para la asignatura de Cómputo Científico en el programa de Doctorado (UANL).
 > **Saul Sanchez** (2026). *Cómputo Científico - Doctorado*. Facultad de Ciencias Físico Matemáticas, Universidad Autónoma de Nuevo León (UANL).
