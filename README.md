@@ -1,6 +1,7 @@
 # Cómputo Científico - Doctorado Materia que se lleva a cabo en la FCFM
 ## Descripción del proyecto
 Repositorio destinado a las prácticas, algoritmos y documentación desarrollados para la asignatura de Cómputo Científico en el programa de Doctorado (UANL).
+> **Saul Sanchez** (2026). *Cómputo Científico - Doctorado*. Facultad de Ciencias Físico Matemáticas, Universidad Autónoma de Nuevo León (UANL).
 
 ## Estructura de carpetas
 La organización del repositorio es la siguiente:
@@ -16,6 +17,6 @@ La organización del repositorio es la siguiente:
 3. Ejecuta los scripts o revisa la documentación en sus respectivas carpetas (`src/`, `docs/`).
 
 ## Cómo citar
-Para hacer referencia a este trabajo, utiliza el siguiente formato:
 
-> **Saul Sanchez** (2026). *Cómputo Científico - Doctorado*. Facultad de Ciencias Físico Matemáticas, Universidad Autónoma de Nuevo León (UANL).
+Si utilizas este software o los algoritmos de este repositorio en tu investigación, por favor utiliza el botón **"Cite this repository"** (ubicado en el menú lateral derecho de la página principal) para obtener el formato de citación adecuado generado automáticamente desde nuestro archivo `CITATION.cff`.
+
