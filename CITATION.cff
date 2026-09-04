@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "Si utilizas este software o estos algoritmos en tu investigación, por favor cítalo como se indica a continuación."
+authors:
+  - family-names: "Sánchez"
+    given-names: "Saúl"
+title: "Cómputo Científico - Doctorado"
+version: 1.0
+date-released: 2026-08-28
