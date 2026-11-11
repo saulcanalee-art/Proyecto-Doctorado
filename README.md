@@ -1,7 +1,17 @@
 # Cómputo Científico - Doctorado Materia que se lleva a cabo en la FCFM
 [![.github/workflows/latex.yml](https://github.com/saulcanalee-art/Proyecto-Doctorado/actions/workflows/latex.yml/badge.svg?branch=main)](https://github.com/saulcanalee-art/Proyecto-Doctorado/actions/workflows/latex.yml)
 ## Descripción del proyecto
-Repositorio destinado a las prácticas, algoritmos y documentación desarrollados para la asignatura de Cómputo Científico en el programa de Doctorado (UANL).
+# Redistribución Demográfica y Migratoria en México (INEGI)
+
+## Propósito
+Este proyecto analiza la dinámica demográfica y los saldos migratorios internos de los 32 estados de México para proyectar cómo se distribuirá la población hacia el 2035 y anticipar las necesidades de infraestructura en los estados receptores.
+
+## Cómo reproducir
+El flujo de extracción y procesamiento de datos está automatizado en un solo script de Python. Para reproducirlo desde la raíz del repositorio, ejecuta:
+
+```bash
+pip install -r requirements.txt
+python src/etl_inegi.py
 > **Saul Sanchez** (2026). *Cómputo Científico - Doctorado*. Facultad de Ciencias Físico Matemáticas, Universidad Autónoma de Nuevo León (UANL).
 
 ## Estructura de carpetas
