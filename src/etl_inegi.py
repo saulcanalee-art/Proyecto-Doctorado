@@ -9,9 +9,15 @@ import pyarrow as pa
 import pyarrow.parquet as pq
 
 # 1. Configuración de rutas relativas al repositorio
-BASE_DIR = Path(__file__).resolve().parent.parent
+try:
+    BASE_DIR = Path(__file__).resolve().parent.parent
+except NameError:
+    # Si se corre desde Jupyter Notebook dentro de notebook/ o en la raíz
+    BASE_DIR = Path.cwd().parent if Path.cwd().name == "notebook" else Path.cwd()
 RAW_DIR = BASE_DIR / "data" / "raw"
 PROCESSED_DIR = BASE_DIR / "data" / "processed"
+# 1. Configuración de rutas relativas (compatible con terminal y Jupyter Notebook)
+
 
 RAW_DIR.mkdir(parents=True, exist_ok=True)
 PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
