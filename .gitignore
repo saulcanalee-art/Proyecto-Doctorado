@@ -1,4 +1,8 @@
-# --- LaTeX ---
+# =====================================================================
+# GitIgnore - PIA Cómputo Científico 
+# =====================================================================
+
+# --- LaTeX Auxiliares (Archivos temporales de compilación) ---
 *.aux
 *.bbl
 *.bcf
@@ -10,7 +14,6 @@
 *.synctex.gz
 *.toc
 *.xdv
-*.pdf
 *.run.xml
 *.synctex(busy)
 ._*.pdf
@@ -21,13 +24,15 @@
 *.upa
 *.upb
 
-# --- Python (Común en Cómputo Científico) ---
+*.pdf
+!docs/*.pdf
+
+# --- Python & Caché ---
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
-env/
 build/
 develop-eggs/
 dist/
@@ -48,9 +53,17 @@ MANIFEST
 .pytest_cache/
 .ipynb_checkpoints/
 
-# --- Datos y Resultados (Recomendado para Cómputo Científico) ---
-# Evita subir datasets pesados o salidas grandes generadas por tus scripts
-*.csv
+# --- Entornos Virtuales e IDEs ---
+.venv/
+venv/
+ENV/
+env/
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- Archivos de Salida Propios de Simulaciones Pesadas ---
 *.h5
 *.nc
 *.dat
@@ -58,16 +71,11 @@ MANIFEST
 *.npz
 output/
 results/
-data/
 
-# --- Entornos Virtuales e IDEs ---
-.venv/
-venv/
-ENV/
-.vscode/
-.idea/
-*.swp
-*.swo
+# --- Power BI (.pbip cache temporal) ---
+*.pbit
+*.pbix.cache
+**/.pbi/localSettings.json
 
 # --- Sistema Operativo ---
 # Windows

@@ -1,0 +1,384 @@
+{
+  "Header": {
+    "Name": "Datos compactos BISE",
+    "Email": "atencion.usuarios@inegi.org.mx"
+  },
+  "Series": [
+    {
+      "INDICADOR": "1002000001",
+      "FREQ": "7",
+      "TOPIC": "123",
+      "UNIT": "151",
+      "UNIT_MULT": "",
+      "NOTE": "1398",
+      "SOURCE": "2,3,343,487,1671,1714,3001,3455",
+      "LASTUPDATE": "24/09/2026 12:00:00 a. m.",
+      "STATUS": null,
+      "OBSERVATIONS": [
+        {
+          "TIME_PERIOD": "2025",
+          "OBS_VALUE": "6446935.00000000000000000000",
+          "OBS_EXCEPTION": null,
+          "OBS_STATUS": "3",
+          "OBS_SOURCE": "",
+          "OBS_NOTE": "11670",
+          "COBER_GEO": "11"
+        },
+        {
+          "TIME_PERIOD": "2020",
+          "OBS_VALUE": "6166934.00000000000000000000",
+          "OBS_EXCEPTION": null,
+          "OBS_STATUS": "3",
+          "OBS_SOURCE": "",
+          "OBS_NOTE": "",
+          "COBER_GEO": "11"
+        },
+        {
+          "TIME_PERIOD": "2015",
+          "OBS_VALUE": "5864777.00000000000000000000",
+          "OBS_EXCEPTION": null,
+          "OBS_STATUS": "3",
+          "OBS_SOURCE": "",
+          "OBS_NOTE": "8230",
+          "COBER_GEO": "11"
+        },
+        {
+          "TIME_PERIOD": "2010",
+          "OBS_VALUE": "5486372.00000000000000000000",
+          "OBS_EXCEPTION": null,
+          "OBS_STATUS": "3",
+          "OBS_SOURCE": "",
+          "OBS_NOTE": "115,425",
+          "COBER_GEO": "11"
+        },
+        {
+          "TIME_PERIOD": "2005",
+          "OBS_VALUE": "4893812.00000000000000000000",
+          "OBS_EXCEPTION": null,
+          "OBS_STATUS": "3",
+          "OBS_SOURCE": "",
+          "OBS_NOTE": "49,425",
+          "COBER_GEO": "11"
+        },
+        {
+          "TIME_PERIOD": "2000",
+          "OBS_VALUE": "4663032.00000000000000000000",
+          "OBS_EXCEPTION": null,
+          "OBS_STATUS": "3",
+          "OBS_SOURCE": "",
+          "OBS_NOTE": "9,425",
+          "COBER_GEO": "11"
+        },
+        {
+          "TIME_PERIOD": "1995",
+          "OBS_VALUE": "4406568.00000000000000000000",
+          "OBS_EXCEPTION": null,
+          "OBS_STATUS": "3",
+          "OBS_SOURCE": "",
+          "OBS_NOTE": "422,425",
+          "COBER_GEO": "11"
+        },
+        {
+          "TIME_PERIOD": "1990",
+          "OBS_VALUE": "3982593.00000000000000000000",
+          "OBS_EXCEPTION": null,
+          "OBS_STATUS": "3",
+          "OBS_SOURCE": "",
+          "OBS_NOTE": "",
+          "COBER_GEO": "11"
+        },
+        {
+          "TIME_PERIOD": "1980",
+          "OBS_VALUE": "3006110.00000000000000000000",
+          "OBS_EXCEPTION": null,
+          "OBS_STATUS": "3",
+          "OBS_SOURCE": "",
+          "OBS_NOTE": "",
+          "COBER_GEO": "11"
+        },
+        {
+          "TIME_PERIOD": "1970",
+          "OBS_VALUE": "2270370.00000000000000000000",
+          "OBS_EXCEPTION": null,
+          "OBS_STATUS": "3",
+          "OBS_SOURCE": "",
+          "OBS_NOTE": "",
+          "COBER_GEO": "11"
+        },
+        {
+          "TIME_PERIOD": "1960",
+          "OBS_VALUE": "1735490.00000000000000000000",
+          "OBS_EXCEPTION": null,
+          "OBS_STATUS": "3",
+          "OBS_SOURCE": "",
+          "OBS_NOTE": "",
+          "COBER_GEO": "11"
+        },
+        {
+          "TIME_PERIOD": "1950",
+          "OBS_VALUE": "1328712.00000000000000000000",
+          "OBS_EXCEPTION": null,
+          "OBS_STATUS": "3",
+          "OBS_SOURCE": "",
+          "OBS_NOTE": "",
+          "COBER_GEO": "11"
+        },
+        {
+          "TIME_PERIOD": "1940",
+          "OBS_VALUE": "1046490.00000000000000000000",
+          "OBS_EXCEPTION": null,
+          "OBS_STATUS": "3",
+          "OBS_SOURCE": "",
+          "OBS_NOTE": "",
+          "COBER_GEO": "11"
+        },
+        {
+          "TIME_PERIOD": "1930",
+          "OBS_VALUE": "987801.00000000000000000000",
+          "OBS_EXCEPTION": null,
+          "OBS_STATUS": "3",
+          "OBS_SOURCE": "",
+          "OBS_NOTE": "",
+          "COBER_GEO": "11"
+        },
+        {
+          "TIME_PERIOD": "1921",
+          "OBS_VALUE": "860364.00000000000000000000",
+          "OBS_EXCEPTION": null,
+          "OBS_STATUS": "3",
+          "OBS_SOURCE": "",
+          "OBS_NOTE": "",
+          "COBER_GEO": "11"
+        },
+        {
+          "TIME_PERIOD": "1910",
+          "OBS_VALUE": "1081651.00000000000000000000",
+          "OBS_EXCEPTION": null,
+          "OBS_STATUS": "3",
+          "OBS_SOURCE": "",
+          "OBS_NOTE": "",
+          "COBER_GEO": "11"
+        }
+      ]
+    },
+    {
+      "INDICADOR": "3105001001",
+      "FREQ": "7",
+      "TOPIC": "123",
+      "UNIT": "54",
+      "UNIT_MULT": "",
+      "NOTE": "138",
+      "SOURCE": "1714,3001,3455,20096",
+      "LASTUPDATE": "22/09/2026 12:00:00 a. m.",
+      "STATUS": null,
+      "OBSERVATIONS": [
+        {
+          "TIME_PERIOD": "2025",
+          "OBS_VALUE": "209.86873606089500000000",
+          "OBS_EXCEPTION": null,
+          "OBS_STATUS": "3",
+          "OBS_SOURCE": "",
+          "OBS_NOTE": "11626",
+          "COBER_GEO": "11"
+        },
+        {
+          "TIME_PERIOD": "2020",
+          "OBS_VALUE": "201.48984453773200000000",
+          "OBS_EXCEPTION": null,
+          "OBS_STATUS": "3",
+          "OBS_SOURCE": "",
+          "OBS_NOTE": "",
+          "COBER_GEO": "11"
+        },
+        {
+          "TIME_PERIOD": "2015",
+          "OBS_VALUE": "191.25493000000000000000",
+          "OBS_EXCEPTION": null,
+          "OBS_STATUS": "3",
+          "OBS_SOURCE": "",
+          "OBS_NOTE": "",
+          "COBER_GEO": "11"
+        },
+        {
+          "TIME_PERIOD": "2010",
+          "OBS_VALUE": "179.25000000000000000000",
+          "OBS_EXCEPTION": null,
+          "OBS_STATUS": "3",
+          "OBS_SOURCE": "",
+          "OBS_NOTE": "",
+          "COBER_GEO": "11"
+        },
+        {
+          "TIME_PERIOD": "2005",
+          "OBS_VALUE": "157.70000000000000000000",
+          "OBS_EXCEPTION": null,
+          "OBS_STATUS": "3",
+          "OBS_SOURCE": "",
+          "OBS_NOTE": "",
+          "COBER_GEO": "11"
+        },
+        {
+          "TIME_PERIOD": "2000",
+          "OBS_VALUE": "150.30000000000000000000",
+          "OBS_EXCEPTION": null,
+          "OBS_STATUS": "3",
+          "OBS_SOURCE": "",
+          "OBS_NOTE": "",
+          "COBER_GEO": "11"
+        },
+        {
+          "TIME_PERIOD": "1995",
+          "OBS_VALUE": "143.20000000000000000000",
+          "OBS_EXCEPTION": null,
+          "OBS_STATUS": "3",
+          "OBS_SOURCE": "",
+          "OBS_NOTE": "",
+          "COBER_GEO": "11"
+        },
+        {
+          "TIME_PERIOD": "1990",
+          "OBS_VALUE": "130.00000000000000000000",
+          "OBS_EXCEPTION": null,
+          "OBS_STATUS": "3",
+          "OBS_SOURCE": "",
+          "OBS_NOTE": "",
+          "COBER_GEO": "11"
+        },
+        {
+          "TIME_PERIOD": "1980",
+          "OBS_VALUE": "98.60000000000000000000",
+          "OBS_EXCEPTION": null,
+          "OBS_STATUS": "3",
+          "OBS_SOURCE": "",
+          "OBS_NOTE": "",
+          "COBER_GEO": "11"
+        },
+        {
+          "TIME_PERIOD": "1970",
+          "OBS_VALUE": "74.20000000000000000000",
+          "OBS_EXCEPTION": null,
+          "OBS_STATUS": "3",
+          "OBS_SOURCE": "",
+          "OBS_NOTE": "",
+          "COBER_GEO": "11"
+        },
+        {
+          "TIME_PERIOD": "1960",
+          "OBS_VALUE": "56.70000000000000000000",
+          "OBS_EXCEPTION": null,
+          "OBS_STATUS": "3",
+          "OBS_SOURCE": "",
+          "OBS_NOTE": "",
+          "COBER_GEO": "11"
+        },
+        {
+          "TIME_PERIOD": "1950",
+          "OBS_VALUE": "43.50000000000000000000",
+          "OBS_EXCEPTION": null,
+          "OBS_STATUS": "3",
+          "OBS_SOURCE": "",
+          "OBS_NOTE": "",
+          "COBER_GEO": "11"
+        },
+        {
+          "TIME_PERIOD": "1940",
+          "OBS_VALUE": "34.20000000000000000000",
+          "OBS_EXCEPTION": null,
+          "OBS_STATUS": "3",
+          "OBS_SOURCE": "",
+          "OBS_NOTE": "",
+          "COBER_GEO": "11"
+        },
+        {
+          "TIME_PERIOD": "1930",
+          "OBS_VALUE": "32.30000000000000000000",
+          "OBS_EXCEPTION": null,
+          "OBS_STATUS": "3",
+          "OBS_SOURCE": "",
+          "OBS_NOTE": "",
+          "COBER_GEO": "11"
+        },
+        {
+          "TIME_PERIOD": "1921",
+          "OBS_VALUE": "28.10000000000000000000",
+          "OBS_EXCEPTION": null,
+          "OBS_STATUS": "3",
+          "OBS_SOURCE": "",
+          "OBS_NOTE": "",
+          "COBER_GEO": "11"
+        },
+        {
+          "TIME_PERIOD": "1910",
+          "OBS_VALUE": "38.10000000000000000000",
+          "OBS_EXCEPTION": null,
+          "OBS_STATUS": "3",
+          "OBS_SOURCE": "",
+          "OBS_NOTE": "",
+          "COBER_GEO": "11"
+        },
+        {
+          "TIME_PERIOD": "1900",
+          "OBS_VALUE": "34.70000000000000000000",
+          "OBS_EXCEPTION": null,
+          "OBS_STATUS": "3",
+          "OBS_SOURCE": "",
+          "OBS_NOTE": "",
+          "COBER_GEO": "11"
+        }
+      ]
+    },
+    {
+      "INDICADOR": "6207140303",
+      "FREQ": "7",
+      "TOPIC": "123",
+      "UNIT": "151",
+      "UNIT_MULT": "",
+      "NOTE": "",
+      "SOURCE": "3455",
+      "LASTUPDATE": "22/09/2026 12:00:00 a. m.",
+      "STATUS": null,
+      "OBSERVATIONS": [
+        {
+          "TIME_PERIOD": "2025",
+          "OBS_VALUE": "4341452.00000000000000000000",
+          "OBS_EXCEPTION": null,
+          "OBS_STATUS": "3",
+          "OBS_SOURCE": "",
+          "OBS_NOTE": "11626",
+          "COBER_GEO": "11"
+        }
+      ]
+    },
+    {
+      "INDICADOR": "6200205262",
+      "FREQ": "1",
+      "TOPIC": "130,553",
+      "UNIT": "188",
+      "UNIT_MULT": "",
+      "NOTE": "",
+      "SOURCE": "2,487",
+      "LASTUPDATE": "04/12/2018 12:00:00 a. m.",
+      "STATUS": null,
+      "OBSERVATIONS": [
+        {
+          "TIME_PERIOD": "2010",
+          "OBS_VALUE": "16820.00000000000000000000",
+          "OBS_EXCEPTION": null,
+          "OBS_STATUS": "3",
+          "OBS_SOURCE": "",
+          "OBS_NOTE": "",
+          "COBER_GEO": "11"
+        },
+        {
+          "TIME_PERIOD": "2000",
+          "OBS_VALUE": "19244.00000000000000000000",
+          "OBS_EXCEPTION": null,
+          "OBS_STATUS": "3",
+          "OBS_SOURCE": "",
+          "OBS_NOTE": "5106",
+          "COBER_GEO": "11"
+        }
+      ]
+    }
+  ]
+}
