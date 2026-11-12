@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "5ce16e4ea00dce180000",
   "position": {
-    "x": 10.212765957446809,
-    "y": 0,
+    "x": 91.77339901477832,
+    "y": 743.49753694581273,
     "z": 0,
-    "height": 884.13373860182367,
-    "width": 1564.0121580547113,
+    "height": 101.08374384236453,
+    "width": 540,
     "tabOrder": 0
   },
   "visual": {
@@ -59,6 +59,23 @@
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Fact_Demografia"
+                  }
+                },
+                "Property": "Densidad Promedio 2025"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
       }
     },
     "drillFilterOtherVisuals": true
