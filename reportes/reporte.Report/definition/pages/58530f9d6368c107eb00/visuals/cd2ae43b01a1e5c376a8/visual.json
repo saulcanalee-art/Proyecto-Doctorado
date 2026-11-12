@@ -5,7 +5,7 @@
     "x": 164.92610837438423,
     "y": 0,
     "z": 1,
-    "height": 300.59113300492612,
+    "height": 192.85714285714286,
     "width": 1646.6009852216748,
     "tabOrder": 1
   },
@@ -42,6 +42,60 @@
                       "fontFamily": "Cambria",
                       "fontSize": "24pt"
                     }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Hacia 2035, México sumará 10.6 millones de habitantes hasta alcanzar 141.5 millones, concentrando la presión de infraestructura en zonas industriales como Nuevo León ganando 115 mil habitantes extra solo por migración interna, mientras las entidades expulsoras se desaceleran cerca de su capacidad de carga (",
+                    "textStyle": {
+                      "fontFamily": "Cambria",
+                      "fontSize": "20pt"
+                    }
+                  },
+                  {
+                    "value": "k",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Cambria",
+                      "fontSize": "20pt"
+                    }
+                  },
+                  {
+                    "value": "). ",
+                    "textStyle": {
+                      "fontFamily": "Cambria",
+                      "fontSize": "20pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
                   }
                 ]
               }

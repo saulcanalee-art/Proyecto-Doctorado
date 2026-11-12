@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "5ce16e4ea00dce180000",
   "position": {
-    "x": 91.77339901477832,
-    "y": 743.49753694581273,
+    "x": 164,
+    "y": 192,
     "z": 0,
-    "height": 101.08374384236453,
-    "width": 540,
+    "height": 448,
+    "width": 796,
     "tabOrder": 0
   },
   "visual": {
@@ -17,17 +17,17 @@
           "projections": [
             {
               "field": {
-                "Measure": {
+                "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Fact_Demografia"
+                      "Entity": "Dim_Entidad"
                     }
                   },
-                  "Property": "Densidad Promedio 2025"
+                  "Property": "Entidad"
                 }
               },
-              "queryRef": "Fact_Demografia.Densidad Promedio 2025",
-              "nativeQueryRef": "Densidad Promedio 2025"
+              "queryRef": "Dim_Entidad.Entidad",
+              "nativeQueryRef": "Entidad"
             },
             {
               "field": {
@@ -56,6 +56,34 @@
               },
               "queryRef": "Fact_Demografia.Poblacion Proyectada 2035",
               "nativeQueryRef": "Poblacion Proyectada 2035"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Demografia"
+                    }
+                  },
+                  "Property": "Brecha Migratoria 2035"
+                }
+              },
+              "queryRef": "Fact_Demografia.Brecha Migratoria 2035",
+              "nativeQueryRef": "Brecha Migratoria 2035"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Demografia"
+                    }
+                  },
+                  "Property": "Densidad Promedio 2025"
+                }
+              },
+              "queryRef": "Fact_Demografia.Densidad Promedio 2025",
+              "nativeQueryRef": "Densidad Promedio 2025"
             }
           ]
         }
@@ -70,13 +98,48 @@
                     "Entity": "Fact_Demografia"
                   }
                 },
-                "Property": "Densidad Promedio 2025"
+                "Property": "Brecha Migratoria 2035"
               }
             },
             "direction": "Ascending"
           }
         ]
       }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'México alcanzará 141.5 millones de habitantes en 2035, un incremento de 10.6 millones respecto a 2025'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Unidades: Habitantes y hab/km² | Fuente: INEGI BISE v2.0 y Modelo EDO Logístico | Licencia: Libre Uso MX'"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
   },
@@ -92,34 +155,6 @@
               }
             },
             "Property": "Densidad Promedio 2025"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "809bd82f0865517a20d6",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fact_Demografia"
-              }
-            },
-            "Property": "Poblacion 2025"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "cc35cb716c1045d28302",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fact_Demografia"
-              }
-            },
-            "Property": "Poblacion Proyectada 2035"
           }
         },
         "type": "Advanced"

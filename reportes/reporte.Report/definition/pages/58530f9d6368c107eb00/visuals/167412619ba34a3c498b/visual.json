@@ -1,0 +1,103 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "167412619ba34a3c498b",
+  "position": {
+    "x": 960,
+    "y": 192,
+    "z": 2,
+    "height": 448,
+    "width": 742,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_Entidad"
+                    }
+                  },
+                  "Property": "Entidad"
+                }
+              },
+              "queryRef": "Dim_Entidad.Entidad",
+              "nativeQueryRef": "Entidad",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Demografia"
+                    }
+                  },
+                  "Property": "Brecha Migratoria 2035"
+                }
+              },
+              "queryRef": "Fact_Demografia.Brecha Migratoria 2035",
+              "nativeQueryRef": "Brecha Migratoria 2035"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Fact_Demografia"
+                  }
+                },
+                "Property": "Brecha Migratoria 2035"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Quintana Roo, Baja California Sur y Nuevo Léon  lideran la ganancia poblacional neta por migración interna hacia 2035'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Unidades: Habitantes netos ganados/perdidos por migración (2025–2035) | Fuente: INEGI BISE v2.0 | Licencia: Libre Uso MX'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
