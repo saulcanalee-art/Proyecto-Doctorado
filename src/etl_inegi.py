@@ -49,7 +49,6 @@ def extraer_json_estado(cve_entidad: str, usar_cache: bool = True) -> dict:
     """Consulta la API del INEGI y guarda el JSON crudo en data/raw/."""
     ruta_raw = RAW_DIR / f"inegi_entidad_{cve_entidad}.json"
     
-    # Si ya existen los JSON en data/raw/ y usar_cache=True, los lee directo
     if usar_cache and ruta_raw.exists():
         with open(ruta_raw, "r", encoding="utf-8") as f:
             return json.load(f)
@@ -101,8 +100,11 @@ def modelo_logistico(t, K, r, P0, t0):
     """Ecuación logística con P0 libre para absorber ruido histórico inicial."""
     return K / (1.0 + ((K - P0) / P0) * np.exp(-r * (t - t0)))
 
-def proyectar_estado_edo(df_estado: pd.DataFrame, anios_futuros=[2030, 2035]) -> pd.DataFrame:
-    """Ajusta modelo logístico y simula EDO con y sin migración hacia 2030 y 2035."""
+def proyectar_estado_edo(df_estado: pd.DataFrame, anios_futuros=[2025, 2030, 2035]) -> pd.DataFrame:
+    """
+    Ajusta modelo logístico y simula EDO con y sin migración.
+    Incluye 2025 en anios_futuros para que las líneas en Power BI se conecten sin huecos.
+    """
     df_val = df_estado[df_estado["Anio"] >= 1930].dropna(subset=["Poblacion_Total"]).sort_values("Anio")
     
     t_data = df_val["Anio"].values.astype(float)
@@ -152,7 +154,7 @@ def proyectar_estado_edo(df_estado: pd.DataFrame, anios_futuros=[2030, 2035]) ->
     for idx, anio in enumerate(anios_futuros):
         for etiqueta, sol in [
             ("Proyección (Con Migración)", sol_con_mig),
-            ("Contrafactual (Sin Migración)", sol_sin_mig)
+            ("Proyección (Sin Migración)", sol_sin_mig)
         ]:
             pob_proy = float(sol.y[0][idx])
             nuevas_filas.append({
@@ -200,14 +202,14 @@ def guardar_parquet_con_metadatos(df: pd.DataFrame, ruta_salida: Path):
     pq.write_table(tabla_arrow, ruta_salida, compression="snappy")
 
 def main():
-    print("Iniciando ETL + Proyección EDO Logística (2030-2035)...")
+    print("Iniciando ETL + Proyección EDO Logística (2025-2035)...")
     frames = []
     
     for cve_ent, nombre in CATALOGO_ESTADOS.items():
         datos_raw = extraer_json_estado(cve_ent, usar_cache=True)
         df_est = procesar_entidad(datos_raw, cve_ent)
         if not df_est.empty:
-            df_est_proy = proyectar_estado_edo(df_est, anios_futuros=[2030, 2035])
+            df_est_proy = proyectar_estado_edo(df_est, anios_futuros=[2025, 2030, 2035])
             frames.append(df_est_proy)
             print(f"[{cve_ent}/32] {nombre} procesado y proyectado a 2035.")
             
