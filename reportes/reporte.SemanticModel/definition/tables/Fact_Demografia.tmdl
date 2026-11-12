@@ -50,7 +50,7 @@ table Fact_Demografia
 			    CALCULATE(
 			        SUM(Fact_Demografia[Poblacion_Total]),
 			        Dim_Calendario[Anio] = 2035,
-			        Fact_Demografia[Tipo_Dato] = "Contrafactual (Sin Migración)"
+			        Fact_Demografia[Tipo_Dato] = "Proyección (Sin Migración)"
 			    )
 			RETURN
 			    PobConMig - PobSinMig
