@@ -1,0 +1,61 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 648,
+            "y": 0
+          },
+          "nodeIndex": "Dim_Entidad",
+          "nodeLineageTag": "792d3f8b-93cf-4285-b305-21d03fe0accd",
+          "size": {
+            "height": 257,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 223,
+            "y": 0
+          },
+          "nodeIndex": "Fact_Demografia",
+          "nodeLineageTag": "86bdc0bb-6e49-4e6b-93a3-2a8b87053a19",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 464,
+            "y": 358.5
+          },
+          "nodeIndex": "Dim_Calendario",
+          "nodeLineageTag": "d86ca1cf-9426-4c64-915e-00bf81646f24",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Todas las tablas",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas las tablas",
+  "defaultDiagram": "Todas las tablas"
+}

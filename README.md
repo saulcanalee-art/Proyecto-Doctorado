@@ -22,6 +22,18 @@ La organización del repositorio es la siguiente:
 * `notebook/`: Cuadernos de experimentación.
 * `ideas/:` Carpeta donde se suben ideas nuevas para el proyecto.
 
+
+
+## Validación de Medidas (Pandas vs Power BI)
+Para garantizar la integridad del modelo en estrella en Power BI, las 3 medidas DAX explícitas fueron contrastadas contra el cálculo directo en `pandas`:
+
+| Medida Explícita | Resultado en Pandas (Python) | Resultado en DAX (Power BI) | Estado |
+| :--- | :--- | :--- | :--- |
+| **Poblacion 2025** | 130,911,314 hab | 130,911,314.00 hab | ✅ Validado |
+| **Densidad Promedio 2025** | 314.84 hab/km² | 314.84 hab/km² | ✅ Validado |
+| **Poblacion Proyectada 2035** | 141,531,185 hab | 141,531,185.00 hab | ✅ Validado |
+
+
 ## Cómo reproducirlo
 1. Clona este repositorio localmente usando: `git clone https://github.com/saulcanalee-art/Proyecto-Doctorado.git`
 2. Navega al directorio del proyecto: `cd Proyecto-Doctorado`

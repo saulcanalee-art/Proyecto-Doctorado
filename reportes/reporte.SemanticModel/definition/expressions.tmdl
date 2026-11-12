@@ -1,0 +1,7 @@
+expression RutaParquet = "C:\Users\saulc\Desktop\Proyecto-Doctorado\data\processed\demografia_inegi_estatal.parquet" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 6c187da7-ba2a-4c4e-a017-63f3cd1c9063
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Text
+

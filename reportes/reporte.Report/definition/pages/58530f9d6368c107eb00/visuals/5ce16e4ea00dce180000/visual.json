@@ -1,0 +1,112 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "5ce16e4ea00dce180000",
+  "position": {
+    "x": 10.212765957446809,
+    "y": 0,
+    "z": 0,
+    "height": 884.13373860182367,
+    "width": 1564.0121580547113,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Demografia"
+                    }
+                  },
+                  "Property": "Densidad Promedio 2025"
+                }
+              },
+              "queryRef": "Fact_Demografia.Densidad Promedio 2025",
+              "nativeQueryRef": "Densidad Promedio 2025"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Demografia"
+                    }
+                  },
+                  "Property": "Poblacion 2025"
+                }
+              },
+              "queryRef": "Fact_Demografia.Poblacion 2025",
+              "nativeQueryRef": "Poblacion 2025"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Demografia"
+                    }
+                  },
+                  "Property": "Poblacion Proyectada 2035"
+                }
+              },
+              "queryRef": "Fact_Demografia.Poblacion Proyectada 2035",
+              "nativeQueryRef": "Poblacion Proyectada 2035"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "de16ea344ac0556a98da",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fact_Demografia"
+              }
+            },
+            "Property": "Densidad Promedio 2025"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "809bd82f0865517a20d6",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fact_Demografia"
+              }
+            },
+            "Property": "Poblacion 2025"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "cc35cb716c1045d28302",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fact_Demografia"
+              }
+            },
+            "Property": "Poblacion Proyectada 2035"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+table Dim_Calendario
+	lineageTag: d86ca1cf-9426-4c64-915e-00bf81646f24
+	dataCategory: Time
+
+	column Date
+		isKey
+		formatString: General Date
+		lineageTag: 7b77245c-8fa7-40bc-9da0-5d8ed7712ed0
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Anio
+		formatString: 0
+		lineageTag: 66e9afdd-123a-43e8-a1d9-278c54cda4bd
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Anio]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Decada
+		formatString: 0
+		lineageTag: 10d7b15b-2c5f-4b46-97de-1eca22b01a13
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Decada]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_Calendario = calculated
+		mode: import
+		source =
+				
+				ADDCOLUMNS(
+				    CALENDAR(DATE(1900, 1, 1), DATE(2035, 12, 31)),
+				    "Anio", YEAR([Date]),
+				    "Decada", INT(YEAR([Date]) / 10) * 10
+				)
+
+	annotation PBI_Id = 82c1206dd2ab4f05980046337efe45f8
+

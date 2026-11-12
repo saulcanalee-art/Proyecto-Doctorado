@@ -1,0 +1,142 @@
+table Fact_Demografia
+	lineageTag: 86bdc0bb-6e49-4e6b-93a3-2a8b87053a19
+
+	measure 'Poblacion 2025' =
+			
+			-- Suma la población nacional censal del año base 2025 (Validación Pandas #1)
+			CALCULATE(
+			    SUM(Fact_Demografia[Poblacion_Total]),
+			    Dim_Calendario[Anio] = 2025,
+			    Fact_Demografia[Tipo_Dato] = "Histórico Censal"
+			)
+		lineageTag: ca00e07c-ec1c-428b-a194-bf131ab204a2
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Densidad Promedio 2025' =
+			
+			-- Promedio de densidad poblacional (hab/km²) de las 32 entidades en 2025 (Validación Pandas #2)
+			CALCULATE(
+			    AVERAGE(Fact_Demografia[Densidad_Pob]),
+			    Dim_Calendario[Anio] = 2025,
+			    Fact_Demografia[Tipo_Dato] = "Histórico Censal"
+			)
+		lineageTag: d3282e40-e2f0-411c-b0d4-e780ade71ee5
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Poblacion Proyectada 2035' =
+			
+			-- Población proyectada a 2035 integrando la EDO logística con flujo migratorio mu (Validación Pandas #3)
+			CALCULATE(
+			    SUM(Fact_Demografia[Poblacion_Total]),
+			    Dim_Calendario[Anio] = 2035,
+			    Fact_Demografia[Tipo_Dato] = "Proyección (Con Migración)"
+			)
+		lineageTag: 5e762315-a12f-4151-94d2-fe1bcd388203
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Brecha Migratoria 2035' = ```
+			
+			-- Habitantes netos ganados o perdidos en 2035 exclusivamente por migración interna (mu)
+			VAR PobConMig = 
+			    CALCULATE(
+			        SUM(Fact_Demografia[Poblacion_Total]),
+			        Dim_Calendario[Anio] = 2035,
+			        Fact_Demografia[Tipo_Dato] = "Proyección (Con Migración)"
+			    )
+			VAR PobSinMig = 
+			    CALCULATE(
+			        SUM(Fact_Demografia[Poblacion_Total]),
+			        Dim_Calendario[Anio] = 2035,
+			        Fact_Demografia[Tipo_Dato] = "Contrafactual (Sin Migración)"
+			    )
+			RETURN
+			    PobConMig - PobSinMig
+			```
+		lineageTag: 8f7df36d-e57e-4cf3-ac0a-3ce40fc98890
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Poblacion_Total
+		dataType: double
+		lineageTag: bec7287d-f53e-499d-aa50-e9452ae22a9c
+		summarizeBy: sum
+		sourceColumn: Poblacion_Total
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Densidad_Pob
+		dataType: double
+		lineageTag: 3034c927-b251-4298-b76b-40c37b4c73c5
+		summarizeBy: sum
+		sourceColumn: Densidad_Pob
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Pob_15_a_64
+		dataType: double
+		lineageTag: 8864f091-dd87-4d17-ab6e-ab0fbd9c863a
+		summarizeBy: sum
+		sourceColumn: Pob_15_a_64
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Saldo_Migratorio_Interno
+		dataType: double
+		lineageTag: 8d3bf8ee-ba55-4f55-92d5-b324f3790cd2
+		summarizeBy: sum
+		sourceColumn: Saldo_Migratorio_Interno
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CVE_ENT
+		dataType: string
+		lineageTag: a4b8388d-2114-4619-bb4b-013c8e939fda
+		summarizeBy: none
+		sourceColumn: CVE_ENT
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tipo_Dato
+		dataType: string
+		lineageTag: a6b78bed-e539-4137-a248-4116cbb97844
+		summarizeBy: none
+		sourceColumn: Tipo_Dato
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fecha
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: b489ec2f-e6f1-4e59-987b-33dafb216f56
+		summarizeBy: none
+		sourceColumn: Fecha
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition Fact_Demografia = m
+		mode: import
+		source =
+				let
+				    Origen = Parquet.Document(File.Contents("C:\Users\saulc\Desktop\Proyecto-Doctorado\data\processed\demografia_inegi_estatal.parquet"), [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null]),
+				    #"Columnas quitadas" = Table.RemoveColumns(Origen,{"Anio", "Entidad", "K_Capacidad", "r_Tasa", "mu_Migracion_Anual"}),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Columnas quitadas",{{"Fecha", type date}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

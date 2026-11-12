@@ -1,0 +1,8 @@
+relationship AutoDetected_055032a7-8e66-4bbd-9579-e08e1e62c25c
+	fromColumn: Fact_Demografia.CVE_ENT
+	toColumn: Dim_Entidad.CVE_ENT
+
+relationship 453c548b-28d2-af2d-63e5-3f86ab604e2e
+	fromColumn: Fact_Demografia.Fecha
+	toColumn: Dim_Calendario.Date
+
