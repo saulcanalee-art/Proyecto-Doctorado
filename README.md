@@ -25,12 +25,15 @@ Los datos se extraen automáticamente bajo los **Términos de Libre Uso MX (INEG
 * **`6200205262` (`Saldo_Migratorio_Interno`):** Saldo neto migratorio quinquenal (Habitantes)[cite: 8].
 
 ### 2. Modelo Logístico con Flujo Migratorio Externo ($\mu$)
-Se ajusta la serie histórica post-revolucionaria (1930–2025) mediante mínimos cuadrados no lineales ponderados (`scipy.optimize.curve_fit`) para estimar la tasa intrínseca $r$ y la capacidad de carga $K$ de cada entidad[cite: 5, 6]. Posteriormente, se integra numéricamente (`scipy.integrate.solve_ivp`) la ecuación diferencial entre 2025 y 2035 comparando el escenario con migración activa frente al escenario sin migración ($\mu = 0$)[cite: 7, 14]:
+Se ajusta la serie histórica post-revolucionaria (1930–2025) mediante mínimos cuadrados no lineales (`scipy.optimize.curve_fit`) para estimar la tasa intrínseca $r$ y la capacidad de carga $K$ de cada entidad. Posteriormente, se integra numéricamente (`scipy.integrate.solve_ivp`) la ecuación diferencial entre 2025 y 2035 comparando el escenario con migración activa frente al escenario sin migración ($\mu = 0$):
 
 $$\frac{dP}{dt} = rP\left(1 - \frac{P}{K}\right) + \mu$$
 
-donde $\mu$ $[\text{hab/año}]$ representa el flujo migratorio anualizado de cada estado.
+donde $\mu$ $[\text{hab/año}]$ representa el flujo migratorio anualizado de cada estado:
 
+* $\mu > 0$ representa un estado receptor de migración.
+* $\mu < 0$ representa un estado emisor migratorio.
+* $\mu = 0$ representa un estado sin flujo migratorio.
 ---
 
 ## Validación de Medidas (Pandas vs. Power BI)
