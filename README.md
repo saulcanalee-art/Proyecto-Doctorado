@@ -29,10 +29,11 @@ Se ajusta la serie histórica post-revolucionaria (1930–2025) mediante mínimo
 
 $$\frac{dP}{dt} = rP\left(1 - \frac{P}{K}\right) + \mu$$
 
-donde $\mu$ $[\text{hab/año}]$ representa el flujo migratorio anualizado de cada estado.
-$\mu$ $>$   representa un estado receptor de migracion
-$\mu$ \le 0 representa un estado emisor de  migratorio 
-$\mu$ == 0  representa un estado sin flujo migratorio
+donde $\mu$ $[\text{hab/año}]$ representa el flujo migratorio anualizado de cada estado:
+
+* $\mu > 0$ representa un estado receptor de migración.
+* $\mu < 0$ representa un estado emisor migratorio.
+* $\mu = 0$ representa un estado sin flujo migratorio.
 ---
 
 ## Validación de Medidas (Pandas vs. Power BI)
