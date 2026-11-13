@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "95fa12abcbe02ee675d8",
   "position": {
-    "x": 590,
+    "x": 315.45454545454544,
     "y": 640,
-    "z": 3,
-    "height": 440,
-    "width": 794,
-    "tabOrder": 3
+    "z": 3000,
+    "height": 439.99999999999994,
+    "width": 1386.3636363636363,
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "lineChart",
@@ -29,6 +29,24 @@
               "queryRef": "Dim_Calendario.Anio",
               "nativeQueryRef": "Anio",
               "active": true
+            }
+          ]
+        },
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_Entidad"
+                    }
+                  },
+                  "Property": "Entidad con Mu"
+                }
+              },
+              "queryRef": "Dim_Entidad.Entidad con Mu",
+              "nativeQueryRef": "Entidad con Mu"
             }
           ]
         },
@@ -98,6 +116,41 @@
         "isDefaultSort": true
       }
     },
+    "objects": {
+      "smallMultiplesLayout": [
+        {
+          "properties": {
+            "rowCount": {
+              "expr": {
+                "Literal": {
+                  "Value": "1L"
+                }
+              }
+            },
+            "columnCount": {
+              "expr": {
+                "Literal": {
+                  "Value": "2L"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "categoryAxis": [
+        {
+          "properties": {
+            "roundRange": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "visualContainerObjects": {
       "title": [
         {
@@ -130,53 +183,6 @@
   },
   "filterConfig": {
     "filters": [
-      {
-        "name": "cf787ff81039b57d7a1b",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Dim_Calendario"
-              }
-            },
-            "Property": "Anio"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "ab7052a88ac6e1005ad5",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Fact_Demografia"
-                  }
-                },
-                "Property": "Poblacion_Total"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "5cfb6dc9da3d56284190",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fact_Demografia"
-              }
-            },
-            "Property": "Tipo_Dato"
-          }
-        },
-        "type": "Categorical"
-      },
       {
         "name": "941cc771698073860c08",
         "field": {
@@ -222,6 +228,13 @@
                           "Value": "'Nuevo León'"
                         }
                       }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Chiapas'"
+                        }
+                      }
                     ]
                   ]
                 }
@@ -230,6 +243,67 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "14cad83eddd454dbeb4d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Dim_Calendario"
+              }
+            },
+            "Property": "Anio"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "afcd4dd3690242257aad",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fact_Demografia"
+              }
+            },
+            "Property": "Tipo_Dato"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "4b97c41e63700a12e705",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Fact_Demografia"
+                  }
+                },
+                "Property": "Poblacion_Total"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "e2ec067b40661068ebb0",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Dim_Entidad"
+              }
+            },
+            "Property": "Entidad con Mu"
+          }
+        },
+        "type": "Categorical"
       }
     ]
   }

@@ -4,10 +4,10 @@
   "position": {
     "x": 960,
     "y": 192,
-    "z": 2,
+    "z": 2000,
     "height": 448,
     "width": 742,
-    "tabOrder": 2
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -99,37 +99,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "087b26448dca2840a38d",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Dim_Entidad"
-              }
-            },
-            "Property": "Entidad"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "7703b43351ade01a08c8",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fact_Demografia"
-              }
-            },
-            "Property": "Brecha Migratoria 2035"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

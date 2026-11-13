@@ -98,7 +98,7 @@
                     "Entity": "Fact_Demografia"
                   }
                 },
-                "Property": "Brecha Migratoria 2035"
+                "Property": "Densidad Promedio 2025"
               }
             },
             "direction": "Descending"
@@ -146,7 +146,63 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "de16ea344ac0556a98da",
+        "name": "e37026bfbcee5950aa11",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Dim_Entidad"
+              }
+            },
+            "Property": "Entidad"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "da2c0a67c03d9069a073",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fact_Demografia"
+              }
+            },
+            "Property": "Poblacion 2025"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "43c02146caadbd08106b",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fact_Demografia"
+              }
+            },
+            "Property": "Poblacion Proyectada 2035"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "fb27755010b0d3187444",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fact_Demografia"
+              }
+            },
+            "Property": "Brecha Migratoria 2035"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "132edbb785000a6979b7",
         "field": {
           "Measure": {
             "Expression": {

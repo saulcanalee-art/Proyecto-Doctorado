@@ -56,6 +56,14 @@ table Dim_Entidad
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column 'Entidad con Mu' =
+			
+			Dim_Entidad[Entidad] & " (μ = " & FORMAT(Dim_Entidad[mu_Migracion_Anual], "+#,##0;-#,##0;0") & " hab/año)"
+		lineageTag: 3e6ea2b9-324c-43ba-8204-73ce6a17cbff
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Dim_Entidad = m
 		mode: import
 		source =
