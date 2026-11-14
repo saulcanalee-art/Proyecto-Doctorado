@@ -1,8 +1,11 @@
 cff-version: 1.2.0
-message: "Si utilizas este software o estos algoritmos en tu investigación, por favor cítalo como se indica a continuación."
+message: "Si utilizas este proyecto, por favor cítalo con los datos de este archivo."
+type: software
 authors:
-  - family-names: "Sánchez"
-    given-names: "Saúl"
-title: "Cómputo Científico - Doctorado"
-version: 1.0
-date-released: 2026-08-28
+  - family-names: "Sánchez González"
+    given-names: "Saúl Ángel"
+title: "Redistribución Demográfica y Migratoria en México hacia 2035 (INEGI)"
+version: "1.0.0"
+date-released: 2026-11-13
+repository-code: "https://github.com/saulcanalee-art/Proyecto-Doctorado"
+license: MIT
