@@ -130,7 +130,7 @@ table Fact_Demografia
 		mode: import
 		source =
 				let
-				    Origen = Parquet.Document(File.Contents("C:\Users\saulc\Desktop\Proyecto-Doctorado\data\processed\demografia_inegi_estatal.parquet"), [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null]),
+				    Origen = Parquet.Document(File.Contents(RutaParquet), [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null]),
 				    #"Columnas quitadas" = Table.RemoveColumns(Origen,{"Anio", "Entidad", "K_Capacidad", "r_Tasa", "mu_Migracion_Anual"}),
 				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Columnas quitadas",{{"Fecha", type date}})
 				in
