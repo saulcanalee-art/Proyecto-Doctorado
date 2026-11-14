@@ -91,10 +91,7 @@ donde $\mu$ $[\text{hab/año}]$ representa el flujo migratorio anualizado de cad
 * $\mu < 0$ representa un estado emisor migratorio.
 * $\mu = 0$ representa un estado sin flujo migratorio.
 
-$\mu$ se calcula en base a los datos migratorios de inegi de los ultimos 5 años: $ \[
-\mu=\frac{\text{inmigrantes del periodo}-\text{emigrantes del periodo}}{5}
-\quad [\text{habitantes/año}]$. Cabe aclarar que estos datos el ultimo año es el 2010.
-\]
+
 ---
 
 ## Validación de Medidas (Pandas vs. Power BI)
