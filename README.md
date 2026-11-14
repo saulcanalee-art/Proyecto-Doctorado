@@ -80,8 +80,8 @@ Los datos se atribuyen al INEGI y se utilizan conforme a sus
 términos de libre uso. La licencia del código se encuentra
 en el archivo `LICENSE`.
 
-### 2. Modelo Logístico con Flujo Migratorio Externo ($\mu$)
-Se ajusta la serie histórica post-revolucionaria (1930–2025) mediante mínimos cuadrados no lineales (`scipy.optimize.curve_fit`) para estimar la tasa intrínseca $r$ y la capacidad de carga $K$ de cada entidad. Posteriormente, se integra numéricamente (`scipy.integrate.solve_ivp`) la ecuación diferencial entre 2025 y 2035 comparando el escenario con migración activa frente al escenario sin migración ($\mu = 0$):
+### 2. Modelo Logístico con Flujo Migratorio Interno ($\mu$)
+Se ajusta la serie de tiempo histórica (1930–2025) mediante mínimos cuadrados (`scipy.optimize.curve_fit`) para estimar la tasa intrínseca $r$ y la capacidad de carga $K$ de cada entidad. Posteriormente, se integra numéricamente (`scipy.integrate.solve_ivp`) la ecuación diferencial entre 2025 y 2035 comparando el escenario con migración activa frente al escenario sin migración ($\mu = 0$):
 
 $$\frac{dP}{dt} = rP\left(1 - \frac{P}{K}\right) + \mu$$
 
@@ -90,6 +90,11 @@ donde $\mu$ $[\text{hab/año}]$ representa el flujo migratorio anualizado de cad
 * $\mu > 0$ representa un estado receptor de migración.
 * $\mu < 0$ representa un estado emisor migratorio.
 * $\mu = 0$ representa un estado sin flujo migratorio.
+
+$\mu$ se calcula en base a los datos migratorios de inegi de los ultimos 5 años: $ \[
+\mu=\frac{\text{inmigrantes del periodo}-\text{emigrantes del periodo}}{5}
+\quad [\text{habitantes/año}]$. Cabe aclarar que estos datos el ultimo año es el 2010.
+\]
 ---
 
 ## Validación de Medidas (Pandas vs. Power BI)
