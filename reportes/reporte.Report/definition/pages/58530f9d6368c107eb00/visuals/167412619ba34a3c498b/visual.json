@@ -77,7 +77,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Quintana Roo, Baja California Sur y Nuevo Léon  lideran la ganancia poblacional neta por migración interna hacia 2035'"
+                  "Value": "'Estado de México, Quintana Roo, Baja California Sur y Nuevo Léon  lideran la ganancia poblacional neta por migración interna hacia 2035'"
                 }
               }
             }
@@ -99,5 +99,37 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "4c7962f5a48bd040289d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Dim_Entidad"
+              }
+            },
+            "Property": "Entidad"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "73f2f5aa5e1276eb60cd",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fact_Demografia"
+              }
+            },
+            "Property": "Brecha Migratoria 2035"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }
