@@ -91,7 +91,26 @@ donde $\mu$ $[\text{hab/año}]$ representa el flujo migratorio anualizado de cad
 * $\mu < 0$ representa un estado emisor migratorio.
 * $\mu = 0$ representa un estado sin flujo migratorio.
 
+<<<<<<< Updated upstream
 
+=======
+<<<<<<< HEAD
+El flujo migratorio anual promedio $\mu$ se estima a partir del saldo
+migratorio de los ultimos 5 años de referencia reportado por el INEGI:
+
+$$
+\mu = \frac{\text{inmigrantes del periodo} - \text{emigrantes del periodo}}{5}
+\quad [\text{habitantes/año}]
+$$
+
+El último año disponible en la serie utilizada es 2010. Por lo tanto,
+este valor no representa la migración observada en 2025. Para construir
+los escenarios de 2025 a 2035. Para simplificar, se supone que este flujo anual permanece
+constante.
+=======
+
+>>>>>>> c5e5f53933ebfa000bd4c246e3651559ead86467
+>>>>>>> Stashed changes
 ---
 
 ## Validación de Medidas (Pandas vs. Power BI)
