@@ -23,7 +23,7 @@ PROCESSED_DIR = BASE_DIR / "data" / "processed"
 RAW_DIR.mkdir(parents=True, exist_ok=True)
 PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
 
-TOKEN = os.getenv("INEGI_TOKEN", "14c78d4c-82c9-24d8-19de-334e4cdba525")
+TOKEN = os.getenv("INEGI_TOKEN") or (BASE_DIR / "token.txt").read_text(encoding="utf-8").strip()
 INDICADORES = "1002000001,3105001001,6207140303,6200205262"
 
 NOMBRES_COLUMNAS = {
