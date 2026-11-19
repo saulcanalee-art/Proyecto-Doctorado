@@ -88,6 +88,7 @@ $$\frac{dP}{dt} = rP\left(1 - \frac{P}{K}\right) + \mu$$
 donde $\mu$ $[\text{hab/año}]$ representa el flujo migratorio anualizado de cada estado:
 
 * $\mu < 0$ representa un estado emisor migratorio.
+* $\mu > 0$ representa un estado receptor migratorio
 * $\mu = 0$ representa un estado receptor de migración.
 
 El flujo migratorio anual promedio $\mu$ se estima a partir del saldo
