@@ -90,3 +90,5 @@ $RECYCLE.BIN/
 .AppleDouble
 .LSOverride
 ._*
+# token de inegi
+token.txt
