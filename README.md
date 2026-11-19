@@ -83,13 +83,13 @@ en el archivo `LICENSE`.
 ### 2. Modelo Logístico con Flujo Migratorio Interno ($\mu$)
 Se ajusta la serie de tiempo histórica (1930–2025) mediante mínimos cuadrados (`scipy.optimize.curve_fit`) para estimar la tasa intrínseca $r$ y la capacidad de carga $K$ de cada entidad. Posteriormente, se integra numéricamente (`scipy.integrate.solve_ivp`) la ecuación diferencial entre 2025 y 2035 comparando el escenario con migración activa frente al escenario sin migración ($\mu = 0$):
 
-$$\frac{dP}{dt} = rP\left(1 - \frac{P}{K}\right) + \mu$$
+$$\frac{dP}{dt} = rP\left(1 - \frac{P}{K}\right) + \Delta\mu$$
 
 donde $\mu$ $[\text{hab/año}]$ representa el flujo migratorio anualizado de cada estado:
 
-* $\mu < 0$ representa un estado emisor migratorio.
-* $\mu > 0$ representa un estado receptor migratorio
-* $\mu = 0$ representa un estado receptor de migración.
+* $\Delta\mu < 0$ representa un estado emisor migratorio.
+* $\Delta\mu > 0$ representa un estado receptor migratorio
+* $\Delta\mu = 0$ representa un estado receptor de migración.
 
 El flujo migratorio anual promedio $\mu$ se estima a partir del saldo
 migratorio de los ultimos 5 años de referencia reportado por el INEGI:
